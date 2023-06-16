@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        header, section, footer {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.6); /* Added semi-transparent white background for text readability */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #projects img {
+            margin-left: 10px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        /* This is the new rule to make the text in the About Me section white */
+
+        /* New rule to remove underline from links */
+        a {
+            color: white;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            color: grey; /* Change to desired color */
+        }
+        /* Styling for header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* New */
+        }
+        /* Styling for the home icon */
+        header img {
+            height: 30px; /* Adjusted height */
+            margin-right: 30px; /* Adjust as needed */
+        }
+        /* Add a rule for the icon */
+        .circle-icon {
+            border-radius: 50%;
+            width: 80px; /* adjust as needed */
+            height: 100px; /* adjust as needed */
+            margin-left: 700px; /* Adjust as needed */
+        }
+        /* Style the button */
+        .rounded-button {
+            padding: 10px 20px; /* Adjust as needed */
+            border: 2px solid #000; /* Adjust as needed */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: #f2f2f2; /* Adjust as needed */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            transition: background-color 0.3s ease; /* Adds a transition effect */
+            margin-top: 5px; /* Adds space above the button */
+            margin-left: 20px;
+        }
+        /* Change button color on hover */
+        .rounded-button:hover {
+            background-color: grey; /* Adjust as needed */
+        }
+
+        /* Style the button */
+        .transparent-button {
+            padding: 5px 10px; /* Adjust as needed */
+            border: 2px solid transparent; /* Transparent border */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: transparent; /* Transparent background */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            font-weight: bold; /* Makes the text bold */
+            font-size: 25px; /* Makes the text larger */
+        }
+
+        /* Change button color on hover */
+        .transparent-button:hover {
+            color: grey; /* Adjust as needed */
+        }        
+        p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            line-height: 2;
+
+        }
+        #about-me p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            font-size: 20px; /* Adjust as needed */
+        }
+        #about-me-image {
+            border: 2px solid #000; /* Adjust as needed */
+            padding: 10px; /* Adjust as needed */
+            width: 300px; /* Adjust as needed */
+            height: auto;
+        }
+        .about-me-content {
+            display: flex;
+            align-items: center; /* This will center-align the image and text vertically */
+        }
+        
+        .about-me-content p {
+            margin-left: 20px; /* Add some space between the image and the text */
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="xuancai.html"> <!-- New hyperlink -->
+                <img src="home.png" alt="Home Icon"> <!-- Home icon -->
+            </a>
+        </div>
+        <h1>About Me</h1>
+        <a href="CV.pdf" class="rounded-button" download>CV</a>
+
+
+        <!-- <img class="circle-icon" src="coolguy.jpg" alt="Icon"> -->
+    </header>
+
+    <section id="about-me">
+        <div class="about-me-content">
+            <!-- Image goes first to appear on the left -->
+            <img id="about-me-image" src="coolguy.jpg" alt="Description of Image">
+    
+            <!-- Then comes the text -->
+            <p> Hi, I'm Xuan (Tommy) Cai from Hangzhou, China.
+                I am a 3rd year Electronics and Information Engineering student at Imperial College.
+                I’ve been learning EEE modules for the 1st year, and studying both modules from EEE and Computer Science Department for 2nd and 3rd year. So I have both solid basic knowledge about software and hardware.
+                <br>
+                I'm quite interested in the fields of Data Analysis, Computer vision and Deep Learning.
+                Currently, I'm employed as a computer vision engineer at C Squared Visions Limited.
+            </p>
+        </div>
+    </section>
+    
+
+
+    <footer>
+        <p>Copyright &copy; 2023 Xuan Cai</p>
+        <p>
+            Contact: caixuan1201@outlook.com
+        </p>
+    </footer>
+
+</body>
+</html>

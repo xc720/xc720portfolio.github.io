@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        header, section, footer {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.6); /* Added semi-transparent white background for text readability */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* This is the new rule to make the text in the About Me section white */
+
+        /* New rule to remove underline from links */
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        /* Styling for header */
+        header {
+            display: flex;
+            align-items: center;
+        }
+        /* Styling for the home icon */
+        header img {
+            height: 30px; /* Adjusted height */
+            margin-right: 10px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="home.png" alt="Home Icon"> 
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <a href="aboutme.html">
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Some information about me...</p>
+        </section>
+    </a>
+
+    <a href="projects.html">
+        <section id="projects">
+            <h2>Projects</h2>
+            <img src="project1.jpg" alt="Project 1">
+            <img src="project2.jpg" alt="Project 2">
+            <!-- Add more images as needed -->
+        </section>
+    </a>
+
+    <a href="education.html">
+        <section id="education">
+            <h2>Education</h2>
+            <p>Details about my resume...</p>
+        </section>
+    </a>
+
+    <a href="contact.html">
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact information...</p>
+        </section>
+    </a>
+
+    <footer>
+        <p>Copyright &copy; 2023 Xuan Cai</p>
+    </footer>
+</body>
+</html>

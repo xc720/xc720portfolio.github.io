@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        header, section, footer {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.6); /* Added semi-transparent white background for text readability */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        #projects img {
+            margin-left: 0px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        #projects h1 {
+            margin-left: 10px; /* adjust as per your needs */
+        }
+        
+        #projects img.img-large {
+            margin-left: 0px;
+            width: 250px; /* Adjust as needed */
+            height: auto;
+        }
+        
+        #projects img.img-normal {
+            margin-left: 0px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        
+        /* This is the new rule to make the text in the About Me section white */
+
+        /* New rule to remove underline from links */
+        a {
+            color: white;
+            text-decoration: none; 
+            
+        }
+        a:hover {
+            color: grey; /* Change to desired color */
+        }
+
+        /* Styling for header */
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 5px; /* Adjust as needed */
+            margin-right: 5px;
+        }
+
+        /* Styling for the home icon */
+        header img {
+            height: 30px; /* Adjusted height */
+            margin-right: 30px; /* Adjust as needed */
+        }
+        /* Add a rule for the icon */
+        .circle-icon {
+            border-radius: 50%;
+            width: 80px; /* adjust as needed */
+            height: 100px; /* adjust as needed */
+            margin-left: 700px; /* Adjust as needed */
+        }
+        /* Style the button */
+        .rounded-button {
+            padding: 10px 20px; /* Adjust as needed */
+            border: 2px solid #000; /* Adjust as needed */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: #f2f2f2; /* Adjust as needed */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            transition: background-color 0.3s ease; /* Adds a transition effect */
+            margin-top: 20px; /* Adds space above the button */
+        }
+        /* Change button color on hover */
+        .rounded-button:hover {
+            background-color: grey; /* Adjust as needed */
+        }
+        /* Style the button */
+        .transparent-button {
+            padding: 5px 10px; /* Adjust as needed */
+            border: 2px solid transparent; /* Transparent border */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: transparent; /* Transparent background */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            font-weight: bold; /* Makes the text bold */
+            font-size: 25px; /* Makes the text larger */
+        }
+
+        /* Change button color on hover */
+        .transparent-button:hover {
+            color: grey; /* Adjust as needed */
+        }        
+
+        .github-button {
+            display: flex;
+            margin-left: auto;
+        }
+        .linkedin-button {
+            display: flex;
+            margin-left: auto;
+        }
+        .github-button, .linkedin-button {
+            margin-right: 10px;
+        }
+        p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            line-height: 2;
+            font-size: 20px; /* Adjust as needed */
+            
+        }
+
+        figure {
+            margin: 0; /* Remove any margins */
+            position: relative;
+        }
+        
+        figure img {
+            display: block;
+        }
+        
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.6); /* You can adjust this */
+            color: white;
+            padding: 10px;
+            display: none; /* Initially hide caption */
+            font-style: italic; /* Make the caption italic */
+            font-weight: bold; /* Make the caption bold */
+        }
+        
+        figure:hover figcaption {
+            display: block; /* Show caption on hover */
+        }
+        
+        
+        #about-me p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            font-size: 20px; /* Adjust as needed */
+        }
+        #about-me-image {
+            border: 2px solid #000; /* Adjust as needed */
+            padding: 10px; /* Adjust as needed */
+            width: 200px; /* Adjust as needed */
+            height: auto;
+           
+        }
+        #section-header {
+            margin-top: 0px; 
+            margin-bottom: 0;
+            margin-left: 15px;  /* Adjust as needed */
+        }
+        
+        .about-me-content {
+            margin-left: 10px;
+            display: flex;
+            align-items: center; /* This will center-align the image and text vertically */
+            padding-bottom: 20px;
+        }
+        
+        .about-me-content p {
+            margin-left: 20px; /* Add some space between the image and the text */
+        }
+        
+        .star-logo {
+            margin-left: 20px; /* Adjust as needed */
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Optional: this will align the items vertically in the center */
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+            padding-left: 15px;
+            border-bottom: 1px solid #4a4a4a;
+        }
+        h3 {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            padding-bottom: 2px;
+            padding-left: 15px;
+
+        }
+        .education-description {
+            padding-left: 15px;
+            font-size: 1.2em;
+        }
+        ul {
+            margin-top: 0;
+            font-size: 18px; 
+            line-height: 2;
+            margin-bottom: 2px;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid #4a4a4a;
+            margin-top: 0;
+        }
+        
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            display: flex; /* Display list items in a row */
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 5px; 
+            margin-right:10px; /* Add space between items */
+        }
+        
+        nav ul li a {
+            color: black; /* Make text color black */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 0px; 
+        }
+        
+        nav ul li a:hover {
+            color: grey; /* Change color to grey on hover */
+        }
+        
+        
+        
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="xuancai.html">
+            <img src="home.png" style="margin-left:20px" alt="Home Icon">
+        </a>
+        <h1>Welcome to My Portfolio ✨</h1>
+        <!-- <img class="star-logo" src="apachespark.svg" alt="Star Logo"> -->
+
+        <nav style="margin-left:30px">
+            <ul>
+                <li><a href="#about-me" style="margin-right:10px;font-size:  20px;"><strong>About Me</strong> </a></li>
+                <li><a href="#education" style="margin-right:10px;font-size:  20px;"><strong>Education</strong></a></li>
+                <li><a href="#projects" style="margin-right:10px;font-size:  20px;"><strong>Projects</strong></a></li>
+                <!-- <li><a href="#skills"><strong>Skills</strong></a></li> -->
+                <li><a href="#contact" style="margin-right:5px;font-size:  20px;"><strong>Contact</strong></a></li>
+
+            </ul>
+        </nav>
+        
+
+
+        
+        <div style="display: flex; margin-left: auto; ">
+            <a href="https://github.com/xc720" class="github-button" >
+                <img src="github.svg" style="margin-right:5px;" alt="GitHub Logo">
+            </a>
+            <a href="https://www.linkedin.com/in/tommy-cai-766069224/" class="linkedin-button">
+                <img src="linkedin.svg" alt="LinkedIn Logo">
+            </a>
+        </div>
+    </header>
+    
+
+    <section id="about-me">
+        <div class="header-content">
+            <h1 id="section-header" style="font-size:30px">About Me</h1>
+            <a href="CV.pdf" class="rounded-button" download>CV</a>
+        </div>
+
+
+
+        <div class="about-me-content">
+            <!-- Image goes first to appear on the left -->
+            <img id="about-me-image"  src="coolguy.jpg" alt="Description of Image" >
+    
+            <!-- Then comes the text -->
+            <p> Hi, I'm Xuan (Tommy) Cai from Hangzhou, China🙌.
+                I am a 3rd year Electronics and Information Engineering student at Imperial College London.
+                I’ve been learning EEE modules for the 1st year, and studying both modules from EEE and Computer Science Department for 2nd and 3rd year. So I have both solid basic knowledge about software and hardware.
+                🖥️<br>
+                I'm skilled in PyTorch, Pandas, and Matplotlib for ML and data-science and used HTML, JavaScript and React for web-development. 
+                And all kinds of related softwares for development. <br>For more details, please see Skill part of my CV. 🌐
+
+                <br>
+                I'm quite interested in the fields of Data Analysis, Computer vision and Deep Learning. 
+                Currently, I'm employed as a computer vision engineer at C Squared Visions Limited.<br>
+                CrossFit👊, basketball🏀 and jogging are what I love the most for my spare time.<br>
+                Discover more about me on my GitHub and LinkedIn profiles! Please don't hesitate to connect or drop me an email for any questions or general advice.<br>
+            </p>
+        </div>
+
+    </section>
+
+    <section id="education">
+        <div class="header-content">
+            <h1 id="section-header">Education</h1>
+        </div>
+        <div class="education-header">
+            <h3>Imperial College London, UK</h3>
+            <h3 ><em>Master Engineering of Electrical and Information Engineering Oct 2020 – Jun 2024</em></h3>
+        </div>
+        
+        <ul>
+            <li><strong>Modules (1st, 2nd & 3rd year):</strong> Machine Learning, Embedded System, Computer Vision, Digital Electronics and Computer Architecture, Discrete Math, Software and System, Instruction Architecture and Compilers, 
+            Operations Research, Signals and Systems, Control Systems, Information Processing, Communication Networks</li>
+            <li><strong>Results:</strong> Upper-second Class</li>
+        </ul>
+    
+        <div class="education-header">
+            <h3>Guanghuaqidi Education, Shanghai, China</h3>
+            <h3 ><em>Jul 2019 – Jun 2020</em></h3>
+        </div>
+
+        <ul>
+            <li><strong>A-Level Results:</strong> A*A*A (Further Math, Math, Physics) <em>Jul 2019 – Jun 2020</em></li>
+        </ul>
+
+
+    </section>
+
+    
+    
+    </section>
+
+    <section id="projects">
+
+        <div class="header-content">
+            <h1 id="section-header">Notable Projects</h1>
+        </div>
+        
+        <div style="display: flex;margin-top: 20px;">
+
+            <figure>
+                <a href="project1.html"> <!-- Replace with your desired URL -->
+                    <img class="img-large" src="contactlense.jpg" alt="Project 1">
+                    <figcaption>3rd Yr Intern: Contact Lense Rotation Angle Calculation</figcaption>
+                </a>
+            </figure>
+            <figure>
+                <a href="project2.html">  <!-- Replace with your desired URL -->
+                    <img class="img-large" src="EZparking.png" alt="Project 2">
+                    <figcaption>3rd Yr Embedded System: EZ Parking</figcaption>
+                </a>
+            </figure>
+    
+            <figure>
+                <a href="project3.html"> <!-- Replace with your desired URL -->
+                    <img class="img-large" src="data.png" alt="Project 3">
+                    <figcaption>2nd Yr UROP: Data Super-resolution </figcaption>
+                </a>
+            </figure>
+
+            <figure>
+                <a href="project4.html"> <!-- Replace with your desired URL -->
+                    <img class="img-large" src="Rover.jpg" alt="Project 4">
+                    <figcaption>2nd Yr FP: Mars Rover</figcaption>
+                </a>
+            </figure>
+
+            <figure>
+                <a href="project5.html"> <!-- Replace with your desired URL -->
+                    <img class="img-large" src="Synthesisable_MIPS-Compatible_CPU.png" alt="Project 5">
+                    <figcaption>2nd Yr: Synthesisable MIPS-Compatible CPU</figcaption>
+                </a>
+            </figure>
+        
+            <figure>
+                <a href="project6.html"> <!-- Replace with your desired URL -->
+                    <img class="img-large" src="Ivy.png" alt="Project 6">
+                    <figcaption>Ivy Unify AI Co-creation</figcaption>
+                </a>
+            </figure>
+        
+
+        
+            <figure>
+                <a href="project7.html"> <!-- Replace with your desired URL -->
+                    <img class="img-normal" src="Arm_cpu.png" alt="Project 7">
+                    <figcaption>1st Yr FP: MU0 ARM CPU</figcaption>
+                </a>
+            </figure>
+        
+
+        </div>
+            
+        
+
+        <!-- Add more images as needed -->
+    </section>
+    
+
+    <!-- <section id="skills">
+        <div class="header-content">
+            <h1 id="section-header">Skills</h1>
+        </div>
+
+    </section> -->
+
+
+    <section id="contact">
+        <div class="header-content">
+            <h1 id="section-header">Contact</h1>
+        </div>
+        
+        <div class="contact-form">
+            <h2 id="form-header" style="margin-top: 10px;margin-bottom: 10px;">Leave a Message</h2>
+            <form id="contact-form" method="post" action="mailto:caixuan1201@outlook.com">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="name" style="margin-left: 15px;font-weight: bold;font-size: 20px;">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="email" style="margin-left: 15px;font-weight: bold;font-size: 20px;">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px; display: flex; flex-direction: column;">
+                    <label for="message" style="align-self: flex-start; margin-left: 15px;margin-bottom: 10px;font-weight: bold;font-size: 20px;">Message:</label>
+                    <textarea id="message" style="margin-left: 10px;"name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group" style="margin-left: 10px;">
+                    <input type="submit" style="margin-left: 15px;font-weight: bold;font-size: 20px;" value="Submit">
+                </div>
+                
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    
+
+    <footer>
+        <p style="margin-left: 15px;font-weight: bold;font-size: 20px;">Copyright &copy; 2023 Xuan Cai</p>
+        <p style="margin-left: 15px;font-weight: bold;font-size: 20px;">
+            Contact: caixuan1201@outlook.com
+        </p>
+    </footer>
+
+</body>
+</html>

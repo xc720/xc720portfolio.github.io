@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        header, section, footer {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.6); /* Added semi-transparent white background for text readability */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #projects img {
+            margin-left: 10px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        /* This is the new rule to make the text in the About Me section white */
+
+        /* New rule to remove underline from links */
+        a {
+            color: white;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            color: grey; /* Change to desired color */
+        }
+        /* Styling for header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* New */
+        }
+        header .centered {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /* Styling for the home icon */
+        header img {
+            height: 30px; /* Adjusted height */
+            margin-right: 30px; /* Adjust as needed */
+        }
+        /* Add a rule for the icon */
+        .circle-icon {
+            border-radius: 50%;
+            width: 80px; /* adjust as needed */
+            height: 100px; /* adjust as needed */
+            margin-left: 700px; /* Adjust as needed */
+        }
+        /* Style the button */
+        .rounded-button {
+            padding: 10px 20px; /* Adjust as needed */
+            border: 2px solid #000; /* Adjust as needed */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: #f2f2f2; /* Adjust as needed */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            transition: background-color 0.3s ease; /* Adds a transition effect */
+            margin-top: 5px; /* Adds space above the button */
+            margin-left: 20px;
+        }
+        /* Change button color on hover */
+        .rounded-button:hover {
+            background-color: grey; /* Adjust as needed */
+        }
+
+        /* Style the button */
+        .transparent-button {
+            padding: 5px 10px; /* Adjust as needed */
+            border: 2px solid transparent; /* Transparent border */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: transparent; /* Transparent background */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            font-weight: bold; /* Makes the text bold */
+            font-size: 25px; /* Makes the text larger */
+        }
+
+        /* Change button color on hover */
+        .transparent-button:hover {
+            color: grey; /* Adjust as needed */
+        }        
+        p {
+            padding-left: 0px; /* Adds space to the left of the paragraph's content */
+            line-height: 2;
+            font-size: 20px; /* Adjust as needed */
+        }
+        #about-me p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            font-size: 20px; /* Adjust as needed */
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 18px; 
+            line-height: 2;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+       
+            <a href="xuancai.html"> <!-- New hyperlink -->
+                <img src="home.png" alt="Home Icon"> <!-- Home icon -->
+            </a>
+            <div class="centered">
+                <h1>Education</h1>
+            </div>
+        <!-- <a href="CV.pdf" class="rounded-button" download>Download CV</a> -->
+
+
+        <!-- <img class="circle-icon" src="coolguy.jpg" alt="Icon"> -->
+    </header>
+
+    <section id="education">
+
+        <h2>Imperial College London, UK</h2>
+        <p><strong>Master Engineering of Electrical and Information Engineering</strong> <em>Oct 2020 – Jun 2024</em></p>
+        <ul>
+            <li><strong>Modules (1st, 2nd & 3rd year):</strong> Machine Learning, Embedded System, Computer Vision, Digital Electronics and Computer Architecture, Discrete Math, Software and System, Instruction Architecture and Compilers, 
+            Operations Research, Signals and Systems, Control Systems, Information Processing, Communication Networks</li>
+            <li><strong>Results:</strong> Upper-second Class</li>
+        </ul>
+        
+
+        <h2>Guanghuaqidi Education, Shanghai, China</h2>
+        <p><strong>A-Level Results:</strong> A*A*A (Further Math, Math, Physics) <em>Jul 2019 – Jun 2020</em></p>
+
+    </section>
+
+
+    <footer>
+        <p>Copyright &copy; 2023 Xuan Cai</p>
+        <p>
+            Contact: caixuan1201@outlook.com
+        </p>
+    </footer>
+
+</body>
+</html>

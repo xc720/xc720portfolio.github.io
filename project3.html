@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('wallpaper.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            height: 100%;
+        }
+        header, section, footer {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.6); /* Added semi-transparent white background for text readability */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        #projects img {
+            margin-left: 0px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        #projects h1 {
+            margin-left: 10px; /* adjust as per your needs */
+        }
+        
+        #projects img.img-large {
+            margin-left: 0px;
+            width: 250px; /* Adjust as needed */
+            height: auto;
+        }
+        
+        #projects img.img-normal {
+            margin-left: 0px;
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        
+        /* This is the new rule to make the text in the About Me section white */
+
+        /* New rule to remove underline from links */
+        a {
+            color: white;
+            text-decoration: none; 
+        }
+        a:hover {
+            color: grey; /* Change to desired color */
+        }
+
+        /* Styling for header */
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        header h1 {
+            margin-left: 5px; /* Adjust as needed */
+            margin-right: 5px;
+        }
+
+        /* Styling for the home icon */
+        header img {
+            height: 30px; /* Adjusted height */
+            margin-right: 30px; /* Adjust as needed */
+        }
+        /* Add a rule for the icon */
+        .circle-icon {
+            border-radius: 50%;
+            width: 80px; /* adjust as needed */
+            height: 100px; /* adjust as needed */
+            margin-left: 700px; /* Adjust as needed */
+        }
+        /* Style the button */
+        .rounded-button {
+            padding: 10px 20px; /* Adjust as needed */
+            border: 2px solid #000; /* Adjust as needed */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: #f2f2f2; /* Adjust as needed */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            transition: background-color 0.3s ease; /* Adds a transition effect */
+            margin-top: 20px; /* Adds space above the button */
+        }
+        /* Change button color on hover */
+        .rounded-button:hover {
+            background-color: grey; /* Adjust as needed */
+        }
+        /* Style the button */
+        .transparent-button {
+            padding: 5px 10px; /* Adjust as needed */
+            border: 2px solid transparent; /* Transparent border */
+            border-radius: 15px; /* Adjust as needed */
+            background-color: transparent; /* Transparent background */
+            color: #000; /* Adjust as needed */
+            text-decoration: none; /* Removes underline */
+            font-weight: bold; /* Makes the text bold */
+            font-size: 25px; /* Makes the text larger */
+        }
+
+        /* Change button color on hover */
+        .transparent-button:hover {
+            color: grey; /* Adjust as needed */
+        }        
+
+        .github-button {
+            display: flex;
+            margin-left: auto;
+        }
+        .linkedin-button {
+            display: flex;
+            margin-left: auto;
+        }
+        .github-button, .linkedin-button {
+            margin-right: 10px;
+        }
+        p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            line-height: 2;
+            font-size: 20px; /* Adjust as needed */
+            
+        }
+
+        figure {
+            margin: 0; /* Remove any margins */
+            position: relative;
+        }
+        
+        figure img {
+            display: block;
+        }
+        
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.6); /* You can adjust this */
+            color: white;
+            padding: 10px;
+            display: none; /* Initially hide caption */
+            font-style: italic; /* Make the caption italic */
+            font-weight: bold; /* Make the caption bold */
+        }
+        
+        figure:hover figcaption {
+            display: block; /* Show caption on hover */
+        }
+        
+        
+        #about-me p {
+            padding-left: 10px; /* Adds space to the left of the paragraph's content */
+            font-size: 20px; /* Adjust as needed */
+        }
+        #about-me-image {
+            border: 2px solid #000; /* Adjust as needed */
+            padding: 10px; /* Adjust as needed */
+            width: 400px; /* Adjust as needed */
+            height: auto;
+           
+        }
+        #section-header {
+            margin-top: 0px; 
+            margin-bottom: 0;
+            margin-left: 15px;  /* Adjust as needed */
+        }
+        
+        .about-me-content {
+            display: flex;
+            align-items: center; /* This will center-align the image and text vertically */
+            padding-bottom: 20px;
+        }
+        
+        .about-me-content p {
+            margin-left: 20px; /* Add some space between the image and the text */
+        }
+        
+        .star-logo {
+            margin-left: 20px; /* Adjust as needed */
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Optional: this will align the items vertically in the center */
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            padding-bottom: 2px;
+            padding-left: 15px;
+            border-bottom: 1px solid #4a4a4a;
+        }
+        h3 {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            padding-bottom: 2px;
+            padding-left: 15px;
+
+        }
+        .education-description {
+            padding-left: 15px;
+            font-size: 1.2em;
+        }
+        ul {
+            margin-top: 0;
+            font-size: 18px; 
+            line-height: 2;
+            margin-bottom: 2px;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid #4a4a4a;
+            margin-top: 0;
+        }
+        
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            display: flex; /* Display list items in a row */
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 5px; 
+            margin-right:10px; /* Add space between items */
+        }
+        
+        nav ul li a {
+            color: black; /* Make text color black */
+            text-decoration: none; /* Remove underline from links */
+            margin-left: 0px; 
+        }
+        
+        nav ul li a:hover {
+            color: grey; /* Change color to grey on hover */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+        <a href="xuancai.html">
+            <img src="home.png" alt="Home Icon">
+        </a>
+        <h1 style="font-size: 20px;">2nd Yr UROP: Data Super-resolution</h1>
+
+        <img class="star-logo" src="apachespark.svg" alt="Star Logo">
+
+
+        <div style="display: flex; margin-left: auto;">
+            <a style="margin-right: 20px;margin-top: 5px;"><strong>Github Link of this project 👉</strong></a>
+            <a href="https://github.com/xc720/LSTM-Data-Super-Resolution" class="github-button">
+                <img src="github.svg" alt="GitHub Logo">
+            </a>
+        </div>
+    </header>
+
+    <section id="project3">
+        <div class="about-me-content">
+            <!-- Image goes first to appear on the left -->
+            <img id="about-me-image" src="data.png" alt="Description of Image">
+    
+            <!-- Then comes the text -->
+            <p> 
+                Nowadays, high-resolution data is becoming more and more demanding, however, the
+resolution of available data is lower than expected. Thus, proper algorithms are needed
+to up sample the lower-resolution data to high-resolution data. In this report, inspired
+by the essay, Poster Abstract: Super-Resolution Reconstruction of Interval Energy Data. Jieyi Lu
+and Baihong Jin. 2020, I proposed a data super-resolution algorithm based on a LSTM
+time-series-data prediction model and evaluated it in the real-world energy data set.
+The target of energy data super-resolution is to estimate a high-resolution energy timeseries data for a low-resolution energy time-series data. For example, given 5-minute
+data, in which each 5-minute data is the average of the corresponding 1-minute data,
+we will try to predict the 1-minute data by our data super-resolution model.
+Just like image super resolution, we normally assume neighbouring pixels in an image
+to have similar values. I think that there may exist some similarities in the training set
+to values that we need to predict. Thus the original model is inspired by a time-seriesdata prediction model.
+All the work carried out are based on the fact that the researched data are from only one
+house and energy consumption on weekdays are similar, which will probably results
+inaccuracy if our model is used in other houses.
+
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer content here -->
+        <p>Copyright &copy; 2023 Xuan Cai</p>
+        <p>Contact: caixuan1201@outlook.com</p>
+    </footer>
+
+</body>
+</html>
